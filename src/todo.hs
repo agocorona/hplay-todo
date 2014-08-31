@@ -66,7 +66,7 @@ todo = do
  itemsLeft= at "todo-count" Insert $ do
     n <- getTasks >>= return . M.size . M.filter ((==) Active . snd) . fst
     wraw $ do strong (show n)
-              toElem $ case n of 1 -> " item left"  _ -> " items left"
+              toElem $ case n of 1 -> " item left";  _ -> " items left"
 
  showClearCompleted= at "clear-holder" Insert $ do
     (tasks,_) <- getTasks
@@ -183,7 +183,7 @@ getTasks :: MonadIO m  => m (Tasks, Int)
 getTasks= liftIO $ do
     mt <- getItem "tasks"
     case mt of
-      Left _ ->   setItem "tasks" (M.toList (M.empty :: Tasks),0 ::Int) >> getTasks
+      Left _ ->   setItem "tasks" (M.toList (M.empty :: Tasks),0 :: Int) >> getTasks
       Right (ts,n) -> return (M.fromList ts, n)
 
 getTask i= liftIO $ do
