@@ -5,6 +5,8 @@ the [todoMVC](todomvc.com) application using the hplayground client framework.
 
 [See it working](http://mflowdemo.herokuapp.com/todo.html)
 
+[Running in the Hplayground IDE](https://tryplayg.herokuapp.com/try/todo.hs/edit)
+
 [Here](http://tryplayg.herokuapp.com/try/todo.hs/edit) you can view, modify and run it
 Status
 ------
